@@ -1,0 +1,38 @@
+#include <iostream>
+#include <cstring>
+using namespace std;
+ 
+void Reverse(char element[]);
+ 
+int main()
+{
+	
+	char element[30];
+ 
+	
+	cout<<"Enter An Element: ";
+	cin.getline(element, sizeof(element));
+ 
+
+	Reverse(element);
+ 
+	cout<<"Element in reverse: "<< element<<endl;
+ 
+}
+void Reverse(char element[])
+{
+
+	int nameLength = strlen(element)-1;
+	
+	
+
+	for(int currentChar=0; currentChar < nameLength; --nameLength, ++currentChar)
+	{
+	
+		char temp = element[currentChar]; 
+	
+		element[currentChar] = element[nameLength];
+		element[nameLength] = temp;
+	}
+	
+}
